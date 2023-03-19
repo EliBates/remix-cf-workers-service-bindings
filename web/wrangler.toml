@@ -4,3 +4,4 @@ compatibility_flags = ["streams_enable_constructors"]
 services = [
   { binding = "GATEWAY_SERVICE", service = "test-gateway" },
 ]
+

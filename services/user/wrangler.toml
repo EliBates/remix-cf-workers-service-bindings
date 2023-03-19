@@ -2,3 +2,9 @@ name = "test-user"
 main = "src/index.ts"
 compatibility_date = "2023-01-01"
 workers_dev = false
+
+[build.upload]
+format = "modules"
+
+[miniflare]
+route = "http://127.0.0.1:8787/user/*"

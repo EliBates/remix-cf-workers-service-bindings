@@ -1,7 +1,10 @@
 {
+  "type": "module",
+  "module": "dist/index.mjs",
   "scripts": {
     "dev": "wrangler dev src/index.ts --local",
-    "deploy": "wrangler publish src/index.ts"
+    "deploy": "wrangler publish src/index.ts",
+    "build": "node ./build.js"
   },
   "dependencies": {
     "hono": "^3.1.0"
