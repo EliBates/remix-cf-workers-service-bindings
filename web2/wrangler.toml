@@ -1,0 +1,21 @@
+name = "remix-cloudflare-workers"
+
+workers_dev = true
+main = "./build/index.js"
+# https://developers.cloudflare.com/workers/platform/compatibility-dates
+compatibility_date = "2022-04-05"
+compatibility_flags = ["streams_enable_constructors"]
+
+services = [
+  { binding = "GATEWAY_SERVICE", service = "test-gateway" },
+]
+
+[site]
+  bucket = "./public"
+
+[build]
+  command = "npm run build"
+
+[miniflare.mounts]
+test-gateway = "../services/web-gateway"
+test-user = "../services/user"
